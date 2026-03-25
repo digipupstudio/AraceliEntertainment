@@ -11,23 +11,23 @@ export default function ElementorSection() {
         {/* Text content */}
         <div className="flex-1 flex flex-col gap-5">
           <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
-            elementor
+            Production Excellence
           </span>
           <h2 className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight capitalize">
-            elementor the page
+            Professional Grade
             <br />
-            builder
+            Production
           </h2>
           <p className="text-[#D1D0CF] font-['Roboto'] text-base md:text-lg max-w-lg leading-relaxed">
-            Our valued customer's requested Elementor support, the premier frontend drag &amp; drop page builder, for seamless on-site creativity.
+            Behind every Araceli Entertainment production is a team of industry professionals committed to delivering blockbuster quality content that tells meaningful stories.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mt-2">
             {[
-              "Drag and Drop Editor",
-              "Motion Effects",
-              "No Coding Required",
-              "Responsive Controls",
+              "Experienced Crew",
+              "Cinematic Quality",
+              "Authentic Storytelling",
+              "Multi-Platform Delivery",
             ].map((feat) => (
               <div key={feat} className="flex items-center gap-3 text-white font-['Roboto'] text-base capitalize">
                 <RedCheckIcon />

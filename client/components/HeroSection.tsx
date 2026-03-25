@@ -23,7 +23,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 flex flex-col items-center gap-4 max-w-5xl mx-auto">
         <p className="text-[#D1D0CF] font-semibold text-base tracking-wide font-['Roboto']">
-          Next Generation of OTT Platform
+          Full Service Production Studio & OTT Streaming Platform
         </p>
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/db00f326703ae3952ba6fb7fe723cec28ed36af6?width=700"
@@ -31,27 +31,25 @@ export default function HeroSection() {
           className="w-64 h-px"
         />
         <h1 className="font-['Roboto'] font-medium text-white text-5xl md:text-6xl lg:text-[68px] leading-tight capitalize">
-          Streamit Your Custom
+          Araceli
         </h1>
         <h1 className="font-['Roboto'] text-white text-5xl md:text-6xl lg:text-[68px] leading-tight">
-          <span className="font-medium">OTT </span>
-          <span className="font-normal line-through italic">Platform</span>
-          <span className="font-medium"> Creator</span>
+          <span className="font-medium">Entertainment</span>
         </h1>
         <p className="text-[#D1D0CF] text-lg md:text-xl tracking-wide max-w-4xl font-['Roboto']">
-          Streamit offers the tools to create your customized OTT platform. Bring your streamit was featured on ThemeForest
+          Blockbuster content delivered to your phone, tablet, and TV. Premium streaming for the nuclear family with edifying stories that matter.
         </p>
         <p className="text-white text-base font-['Roboto']">
-          Clarity is just one conversation away. –{" "}
-          <a href="#" className="font-semibold underline text-white hover:text-[#E50914] transition-colors">
-            Book a quick call.
+          Experience authentic storytelling. –{" "}
+          <a href="/contact" className="font-semibold underline text-white hover:text-[#E50914] transition-colors">
+            Join us today.
           </a>
         </p>
         <div className="flex flex-wrap justify-center gap-8 mt-4">
           {[
-            "Easy customization",
-            "No coding required",
-            "Variety of options",
+            "Original Content",
+            "Multi-Platform Streaming",
+            "Exceptional Value",
           ].map((item) => (
             <div key={item} className="flex items-center gap-3 text-[#D1D0CF] font-['Roboto'] text-base">
               <CheckIcon />

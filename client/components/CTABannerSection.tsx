@@ -11,25 +11,25 @@ export default function CTABannerSection() {
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative z-10 flex flex-col gap-5 max-w-2xl">
             <h2 className="text-white font-['Roboto'] font-medium text-3xl md:text-4xl leading-tight capitalize">
-              Build your own OTT Platform just
+              Experience Entertainment
               <br />
-              like Netflix
+              Your Family Deserves
             </h2>
             <p className="text-[#D1D0CF] font-['Roboto'] text-base md:text-lg leading-relaxed max-w-lg">
-              Still Thinking? Just shut the front door and go for it. You won't regret it.
+              Join millions enjoying premium content that edifies, entertains, and brings families together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-[#E50914] border border-[#E50914] text-white font-['Roboto'] font-medium text-sm capitalize rounded px-8 py-3 hover:bg-red-700 transition-colors"
               >
-                Purchase Theme
+                Start Streaming
               </a>
               <a
-                href="#"
+                href="/about"
                 className="inline-flex items-center justify-center border border-white text-white font-['Roboto'] font-medium text-sm capitalize rounded px-8 py-3 hover:bg-white hover:text-black transition-colors"
               >
-                View Demo
+                Learn More
               </a>
             </div>
           </div>

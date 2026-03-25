@@ -7,15 +7,15 @@ export default function ThemeOverviewSection() {
     <section className="w-full bg-black py-20 px-4">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center gap-6">
         <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
-          theme Overview
+          Our Platform
         </span>
         <h2 className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight">
-          Streamit Your Custom OTT
+          Stream Entertainment
           <br />
-          Platform Creator
+          Your Way
         </h2>
         <p className="text-white font-['Roboto'] text-base md:text-lg max-w-3xl">
-          Here's a quick overview video of Streamit - WordPress theme for video streaming website and its features.
+          Experience Araceli Entertainment's premium streaming service. Award-winning content produced by industry professionals, delivered directly to your devices.
         </p>
 
         {/* Video Player */}

@@ -33,17 +33,17 @@ export default function InnerPagesSection() {
         <div className="flex flex-col lg:flex-row lg:items-start gap-8 mb-12">
           <div className="flex-1">
             <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
-              inner pages
+              Explore More
             </span>
             <h2 className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight capitalize mt-3">
-              Collection of creative
+              Curated Collections
               <br />
-              Inner Pages
+              And Recommendations
             </h2>
           </div>
           <div className="flex-1 flex items-end">
             <p className="text-[#D1D0CF] font-['Roboto'] text-sm md:text-base leading-relaxed max-w-xl">
-              Streamit – video streaming wordpress theme provides an extensive collection of pre-designed inner pages that are both functional and aesthetically appealing, making your website development process more efficient and versatile.
+              Araceli Entertainment offers carefully curated collections organized by genre, theme, and audience. Discover new favorites through personalized recommendations based on your viewing history.
             </p>
           </div>
         </div>

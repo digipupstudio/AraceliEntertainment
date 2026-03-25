@@ -23,23 +23,23 @@ export default function MerchandiseSection() {
         {/* Text */}
         <div className="flex-1 flex flex-col gap-5">
           <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
-            merchandise store
+            Streaming Features
           </span>
           <h2 className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight capitalize">
-            discover our amazing
+            Control Your
             <br />
-            merchandise store
+            Viewing Experience
           </h2>
           <p className="text-[#D1D0CF] font-['Roboto'] text-base md:text-lg max-w-lg leading-relaxed">
-            Start your online merchandise store in minutes. Enjoy secure payments, customizable shipping, and a host of powerful features to succeed.
+            Customize your streaming experience with personalized recommendations, watchlists, and family profiles designed for your unique viewing preferences.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mt-2">
             {[
-              "Infinite Loading",
-              "Filter your products",
-              "amazing filter sidebar",
-              "grid & listing layouts",
+              "Personalized Recommendations",
+              "Watch History Tracking",
+              "Custom Family Profiles",
+              "Smart Playlist Creation",
             ].map((feat) => (
               <div key={feat} className="flex items-center gap-3 text-white font-['Roboto'] text-base capitalize">
                 <RedCheckIcon />

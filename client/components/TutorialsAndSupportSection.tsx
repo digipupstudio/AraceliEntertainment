@@ -7,21 +7,21 @@ export default function TutorialsAndSupportSection() {
           {/* Text */}
           <div className="flex-1 flex flex-col gap-5">
             <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
-              Video Tutorials
+              Getting Started
             </span>
             <h2 className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight capitalize">
-              Video Tutorials for easy
+              Quick Setup Guide
               <br />
-              to understand
+              and Support
             </h2>
             <p className="text-[#D1D0CF] font-['Roboto'] text-base md:text-lg max-w-lg leading-relaxed">
-              Watch our quick, user-friendly video guides for easy setup
+              Get up and running in minutes with our easy setup guides and dedicated customer support team ready to help.
             </p>
             <a
-              href="#"
+              href="/contact"
               className="inline-flex items-center justify-center bg-[#E50914] text-white font-['Roboto'] text-sm capitalize rounded px-7 py-3 mt-2 hover:bg-red-700 transition-colors w-fit"
             >
-              Watch now
+              Contact Support
             </a>
           </div>
 
@@ -51,19 +51,19 @@ export default function TutorialsAndSupportSection() {
           {/* Text */}
           <div className="flex-1 flex flex-col gap-5">
             <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
-              free support
+              Customer Care
             </span>
             <h2 className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight capitalize">
-              6 Months Free Support
+              Dedicated Support Team
             </h2>
             <p className="text-[#D1D0CF] font-['Roboto'] text-base md:text-lg max-w-lg leading-relaxed">
-              worry-free usage with complimentary support for smooth platform building
+              Our customer support team is available to assist you with any questions or technical issues you may encounter.
             </p>
             <a
-              href="#"
+              href="/contact"
               className="inline-flex items-center justify-center bg-[#E50914] text-white font-['Roboto'] text-sm capitalize rounded px-7 py-3 mt-2 hover:bg-red-700 transition-colors w-fit"
             >
-              get it now
+              get support
             </a>
           </div>
         </div>
@@ -75,15 +75,15 @@ export default function TutorialsAndSupportSection() {
           {/* Text */}
           <div className="flex-1 flex flex-col gap-5">
             <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
-              responsive
+              Accessible Anywhere
             </span>
             <h2 className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight capitalize">
-              Maximizing Compatibility
+              Stream on Any Device
               <br />
-              for All Screen Sizes
+              Anytime, Anywhere
             </h2>
             <p className="text-[#D1D0CF] font-['Roboto'] text-base md:text-lg max-w-lg leading-relaxed">
-              You can ensure that your website or application looks great and functions flawlessly on any device, providing a better user experience for your visitors or customers.
+              Watch on your phone during commute, switch to tablet at home, or enjoy on the big screen. Seamless streaming across all your devices with sync technology.
             </p>
           </div>
 

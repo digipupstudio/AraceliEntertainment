@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ThemeOverviewSection from "@/components/ThemeOverviewSection";
 import HomeDemosSection from "@/components/HomeDemosSection";
@@ -16,8 +17,10 @@ import CTABannerSection from "@/components/CTABannerSection";
 
 export default function Index() {
   return (
-    <main className="min-h-screen bg-black font-['Roboto']">
-      <HeroSection />
+    <>
+      <Navigation />
+      <main className="min-h-screen bg-black font-['Roboto']">
+        <HeroSection />
       <ThemeOverviewSection />
       <HomeDemosSection />
       <ElementorSection />
@@ -31,7 +34,8 @@ export default function Index() {
       <ExpertHelpSection />
       <ReviewsSection />
       <FAQSection />
-      <CTABannerSection />
-    </main>
+        <CTABannerSection />
+      </main>
+    </>
   );
 }
