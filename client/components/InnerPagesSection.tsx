@@ -1,3 +1,9 @@
+const ArrowIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 8H13M10 5L13 8L10 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
 const innerPages = [
   {
     title: "FAQ Page",
@@ -32,9 +38,14 @@ export default function InnerPagesSection() {
         {/* Top: text left + description right */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-8 mb-12">
           <div className="flex-1">
-            <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
-              Explore More
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
+                Explore More
+              </span>
+              <span className="text-[#E50914]">
+                <ArrowIcon />
+              </span>
+            </div>
             <h2 className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight capitalize mt-3">
               Curated Collections
               <br />
