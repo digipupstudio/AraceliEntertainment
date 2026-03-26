@@ -71,7 +71,7 @@ export default function ReviewsSection() {
 
           <div
             ref={scrollContainerRef}
-            className="flex-1 overflow-x-auto pb-2 scroll-smooth"
+            className="flex-1 overflow-x-auto pb-2 scroll-smooth hide-scrollbar"
             onMouseEnter={() => setIsAutoScroll(false)}
             onMouseLeave={() => setIsAutoScroll(true)}
           >
