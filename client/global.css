@@ -107,11 +107,29 @@
   html {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: #E50914 #1a1a1a;
   }
 
   html::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: #E50914;
+    border-radius: 5px;
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background: #ff1f1f;
+  }
+
+  /* Hide horizontal scrollbar */
+  html::-webkit-scrollbar-horizontal {
     display: none;
   }
 
@@ -119,25 +137,6 @@
     @apply bg-background text-foreground;
     overflow-x: hidden;
     max-width: 100vw;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Hide scrollbars on all scrollable elements */
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
-  ::-webkit-scrollbar-track {
-    display: none;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    display: none;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
