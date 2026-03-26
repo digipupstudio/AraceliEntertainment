@@ -9,7 +9,6 @@ import FeaturesSection from "@/components/FeaturesSection";
 import MerchandiseSection from "@/components/MerchandiseSection";
 import TypographySection from "@/components/TypographySection";
 import TutorialsAndSupportSection from "@/components/TutorialsAndSupportSection";
-import EcoSystemSection from "@/components/EcoSystemSection";
 import ExpertHelpSection from "@/components/ExpertHelpSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import FAQSection from "@/components/FAQSection";
@@ -30,7 +29,6 @@ export default function Index() {
       <MerchandiseSection />
       <TypographySection />
       <TutorialsAndSupportSection />
-      <EcoSystemSection />
       <ExpertHelpSection />
       <ReviewsSection />
       <FAQSection />

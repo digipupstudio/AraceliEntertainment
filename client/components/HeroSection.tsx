@@ -59,7 +59,7 @@ export default function HeroSection() {
           animate="visible"
           custom={0.15}
         >
-          Streamit Your Custom
+          Araceli Entertainment
         </motion.h1>
 
         <motion.h1
