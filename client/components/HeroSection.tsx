@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const CheckIcon = () => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#check-clip)">
@@ -12,51 +14,133 @@ const CheckIcon = () => (
   </svg>
 );
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut", delay },
+  }),
+};
+
 export default function HeroSection() {
   return (
     <section
-      className="relative w-full min-h-[670px] flex flex-col items-center justify-center text-center py-24 px-4 overflow-hidden"
+      className="relative w-full min-h-[670px] flex flex-col items-center justify-center text-center py-20 px-4 overflow-hidden"
+      aria-label="Hero"
       style={{
-        background: "url('https://api.builder.io/api/v1/image/assets/TEMP/0d59375a7c9c2845944c6da7abd7324ffc647c48?width=3810') lightgray center / cover no-repeat",
+        background:
+          "url('https://api.builder.io/api/v1/image/assets/TEMP/0d59375a7c9c2845944c6da7abd7324ffc647c48?width=3810') lightgray center / cover no-repeat",
       }}
     >
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="relative z-10 flex flex-col items-center gap-4 max-w-5xl mx-auto">
-        <p className="text-[#D1D0CF] font-semibold text-base tracking-wide font-['Roboto']">
-          Full Service Production Studio & OTT Streaming Platform
-        </p>
+      <div className="absolute inset-0 bg-black/50" />
+
+      <div className="relative z-10 flex flex-col items-center gap-4 max-w-5xl mx-auto w-full">
+        <motion.p
+          className="text-[#D1D0CF] font-semibold text-sm md:text-base tracking-wide font-['Roboto']"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0}
+        >
+          Full Service Production Studio &amp; OTT Streaming Platform
+        </motion.p>
+
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/db00f326703ae3952ba6fb7fe723cec28ed36af6?width=700"
           alt=""
-          className="w-64 h-px"
+          className="w-48 md:w-64 h-px"
         />
-        <h1 className="font-['Roboto'] font-medium text-white text-5xl md:text-6xl lg:text-[68px] leading-tight capitalize">
-          Araceli
-        </h1>
-        <h1 className="font-['Roboto'] text-white text-5xl md:text-6xl lg:text-[68px] leading-tight">
-          <span className="font-medium">Entertainment</span>
-        </h1>
-        <p className="text-[#D1D0CF] text-lg md:text-xl tracking-wide max-w-4xl font-['Roboto']">
-          Blockbuster content delivered to your phone, tablet, and TV. Premium streaming for the nuclear family with edifying stories that matter.
-        </p>
-        <p className="text-white text-base font-['Roboto']">
+
+        <motion.h1
+          className="font-['Roboto'] font-medium text-white text-4xl sm:text-5xl md:text-6xl lg:text-[68px] leading-tight capitalize"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.15}
+        >
+          Streamit Your Custom
+        </motion.h1>
+
+        <motion.h1
+          className="font-['Roboto'] text-white text-4xl sm:text-5xl md:text-6xl lg:text-[68px] leading-tight"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.25}
+        >
+          <span className="font-medium">OTT </span>
+          <span className="font-normal line-through italic">Platform</span>
+          <span className="font-medium"> Creator</span>
+        </motion.h1>
+
+        <motion.p
+          className="text-[#D1D0CF] text-base md:text-lg lg:text-xl tracking-wide max-w-3xl font-['Roboto'] px-2"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.35}
+        >
+          Blockbuster content delivered to your phone, tablet, and TV. Premium
+          streaming for the nuclear family with edifying stories that matter.
+        </motion.p>
+
+        <motion.p
+          className="text-white text-sm md:text-base font-['Roboto']"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.45}
+        >
           Experience authentic storytelling. –{" "}
-          <a href="/contact" className="font-semibold underline text-white hover:text-[#E50914] transition-colors">
+          <a
+            href="/contact"
+            className="font-semibold underline text-white hover:text-[#E50914] transition-colors"
+          >
             Join us today.
           </a>
-        </p>
-        <div className="flex flex-wrap justify-center gap-8 mt-4">
-          {[
-            "Original Content",
-            "Multi-Platform Streaming",
-            "Exceptional Value",
-          ].map((item) => (
-            <div key={item} className="flex items-center gap-3 text-[#D1D0CF] font-['Roboto'] text-base">
-              <CheckIcon />
-              <span>{item}</span>
-            </div>
-          ))}
-        </div>
+        </motion.p>
+
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 md:gap-8 mt-2"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.55}
+        >
+          {["Original Content", "Multi-Platform Streaming", "Exceptional Value"].map(
+            (item) => (
+              <div
+                key={item}
+                className="flex items-center gap-2 md:gap-3 text-[#D1D0CF] font-['Roboto'] text-sm md:text-base"
+              >
+                <CheckIcon />
+                <span>{item}</span>
+              </div>
+            )
+          )}
+        </motion.div>
+
+        <motion.div
+          className="flex flex-col sm:flex-row gap-3 mt-4"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.65}
+        >
+          <a
+            href="/contact"
+            className="inline-flex items-center justify-center bg-[#E50914] text-white font-['Roboto'] font-medium text-sm px-8 py-3 rounded hover:bg-red-700 transition-colors"
+          >
+            Start Streaming
+          </a>
+          <a
+            href="/about"
+            className="inline-flex items-center justify-center border border-white text-white font-['Roboto'] font-medium text-sm px-8 py-3 rounded hover:bg-white hover:text-black transition-colors"
+          >
+            Learn More
+          </a>
+        </motion.div>
       </div>
     </section>
   );

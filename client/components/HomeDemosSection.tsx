@@ -1,3 +1,7 @@
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { cardVariants, fadeUp, inViewConfig } from "@/lib/animations";
+
 const demos = [
   {
     title: "Drama Series",
@@ -32,7 +36,7 @@ const demos = [
 ];
 
 const DotRow = () => (
-  <div className="flex gap-2 mb-4">
+  <div className="flex gap-2 mb-4" aria-hidden="true">
     {[0, 1, 2].map((i) => (
       <span key={i} className="w-2.5 h-2.5 rounded-full bg-[#7A7A7A] inline-block" />
     ))}
@@ -40,45 +44,89 @@ const DotRow = () => (
 );
 
 export default function HomeDemosSection() {
+  const ref = useRef(null);
+  const inView = useInView(ref, inViewConfig);
+
   return (
     <section
-      className="w-full py-20 px-4"
+      className="w-full py-20 px-4 overflow-hidden"
+      ref={ref}
+      aria-labelledby="content-library-heading"
       style={{
-        background: "url('https://api.builder.io/api/v1/image/assets/TEMP/f0d898d26b682e551248acd6385fea48ba2a96e2?width=3810') lightgray center / cover no-repeat",
+        background:
+          "url('https://api.builder.io/api/v1/image/assets/TEMP/f0d898d26b682e551248acd6385fea48ba2a96e2?width=3810') lightgray center / cover no-repeat",
       }}
     >
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-6">
-        <span className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']">
+        <motion.span
+          className="text-[#E50914] italic font-medium text-base tracking-widest capitalize font-['Roboto']"
+          variants={fadeUp}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          custom={0}
+        >
           Content Library
-        </span>
-        <h2 className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight capitalize">
+        </motion.span>
+
+        <motion.h2
+          id="content-library-heading"
+          className="text-white font-['Roboto'] font-medium text-4xl md:text-5xl leading-tight capitalize"
+          variants={fadeUp}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          custom={0.1}
+        >
           Diverse Content For Every Mood
-        </h2>
-        <p className="text-[#D1D0CF] font-['Roboto'] text-base md:text-lg max-w-xl">
-          From dramatic features to family comedies, discover stories that resonate with your values
-        </p>
+        </motion.h2>
+
+        <motion.p
+          className="text-[#D1D0CF] font-['Roboto'] text-base md:text-lg max-w-xl"
+          variants={fadeUp}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          custom={0.2}
+        >
+          From dramatic features to family comedies, discover stories that
+          resonate with your values
+        </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-6">
-          {demos.map((demo) => (
-            <div key={demo.title} className="bg-[#0D0D0D] rounded-lg overflow-hidden p-7 flex flex-col gap-3 relative">
+          {demos.map((demo, i) => (
+            <motion.div
+              key={demo.title}
+              className="bg-[#0D0D0D] rounded-lg overflow-hidden p-7 flex flex-col gap-3 relative hover:border hover:border-[#E50914]/30 transition-all"
+              custom={i}
+              variants={cardVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+            >
               <DotRow />
               <div className="relative w-full aspect-[512/380] rounded overflow-hidden">
                 <img
                   src={demo.image}
                   alt={demo.title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <a
                   href="#"
                   className="absolute bottom-[-16px] right-0 w-20 h-20 block hover:scale-105 transition-transform"
+                  aria-label={`Preview ${demo.title}`}
                 >
-                  <img src={demo.badge} alt="Preview" className="w-20 h-20 object-contain" />
+                  <img
+                    src={demo.badge}
+                    alt=""
+                    className="w-20 h-20 object-contain"
+                    loading="lazy"
+                  />
                 </a>
               </div>
               <div className="mt-6 text-left">
-                <span className="text-white font-['Roboto'] font-medium text-base">{demo.title}</span>
+                <span className="text-white font-['Roboto'] font-medium text-base">
+                  {demo.title}
+                </span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
