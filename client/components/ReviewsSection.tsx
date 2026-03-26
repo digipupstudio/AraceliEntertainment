@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 const reviewImages = [
   "https://api.builder.io/api/v1/image/assets/TEMP/bb7607965a8364ef2baf8cdf135b4cc5385e8c95?width=824",
   "https://api.builder.io/api/v1/image/assets/TEMP/89576c36bf7d7c50f9b0d0accd8443d759f2a757?width=824",
@@ -8,10 +10,41 @@ const reviewImages = [
 ];
 
 export default function ReviewsSection() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isAutoScroll, setIsAutoScroll] = useState(true);
+
+  useEffect(() => {
+    if (!scrollContainerRef.current || !isAutoScroll) return;
+
+    const scroll = () => {
+      const container = scrollContainerRef.current;
+      if (!container) return;
+
+      const { scrollLeft, scrollWidth, clientWidth } = container;
+      const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 10;
+
+      if (isAtEnd) {
+        // Smoothly scroll back to the start
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        // Scroll right by one image width + gap
+        container.scrollBy({ left: 430, behavior: "smooth" });
+      }
+    };
+
+    const interval = setInterval(scroll, 3500);
+    return () => clearInterval(interval);
+  }, [isAutoScroll]);
+
   return (
     <section className="w-full bg-black py-12 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
-        <div className="w-full overflow-x-auto pb-2">
+        <div
+          ref={scrollContainerRef}
+          className="w-full overflow-x-auto pb-2 scroll-smooth"
+          onMouseEnter={() => setIsAutoScroll(false)}
+          onMouseLeave={() => setIsAutoScroll(true)}
+        >
           <div className="flex gap-5" style={{ minWidth: "max-content" }}>
             {reviewImages.map((src, i) => (
               <img
